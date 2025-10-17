@@ -9,6 +9,17 @@
 
 This repository contains three key components:
 
+```
+mcp-meal/
+├── server/
+│ ├── fastmcp_server.py # Main FastMCP server hosting the meal suggestion tool
+│ ├── proxy.py # FastAPI proxy server to expose MCP endpoint to external clients
+│ ├── requirements.txt
+│
+└── client/
+└── demo_client_fastmcp.py # Example async client demonstrating usage
+```
+
 
 ## 🚀 Features
 
