@@ -1,11 +1,11 @@
-# 🥗 MCP Meal — Meal Suggestion API via FastMCP + FastAPI
+# MCP Meal — Meal Suggestion API via FastMCP + FastAPI
 
 > **MCP Meal** is a lightweight project demonstrating how to use [FastMCP](https://pypi.org/project/fastmcp/) to build and expose AI/LLM-accessible microservices.  
 > It connects to [TheMealDB](https://www.themealdb.com) API to suggest meal ideas based on ingredients you have on hand.
 
 ---
 
-## 📂 Project Overview
+## Project Overview
 
 This repository contains three key components:
 
@@ -21,17 +21,17 @@ mcp-meal/
 ```
 
 
-## 🚀 Features
+## Features
 
-- 🔧 **FastMCP Integration** — defines a tool (`suggest_meal`) that LLMs or clients can call via MCP protocol.  
-- 🍳 **Smart Ingredient Parsing** — parses free-form text like “I have chicken, rice, and garlic.”  
-- 🍽️ **Recipe Lookup** — fetches data from [TheMealDB API](https://www.themealdb.com/api.php).  
-- 🌍 **HTTP Proxy** — wraps the MCP service in a FastAPI endpoint for REST-style usage.  
-- 💡 **Async Client Demo** — shows how to interact with the service programmatically.
+- **FastMCP Integration** — defines a tool (`suggest_meal`) that LLMs or clients can call via MCP protocol.  
+- **Smart Ingredient Parsing** — parses free-form text like “I have chicken, rice, and garlic.”  
+- **Recipe Lookup** — fetches data from [TheMealDB API](https://www.themealdb.com/api.php).  
+- **HTTP Proxy** — wraps the MCP service in a FastAPI endpoint for REST-style usage.  
+- **Async Client Demo** — shows how to interact with the service programmatically.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |------------|-------------|
@@ -43,7 +43,7 @@ mcp-meal/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Clone the repo and install dependencies:
 
@@ -57,7 +57,7 @@ source .venv/bin/activate   # or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
-## ▶️ Running the Servers
+## Running the Servers
 
 This project runs two lightweight servers — one for FastMCP and one for FastAPI (proxy).
 
@@ -97,7 +97,7 @@ curl -X POST http://127.0.0.1:5000/mcp/suggest \
      -d '{"context": "I have chicken, rice, and onions"}'
 ```
 
-#### Example Response:
+**Example Response**:
 ```json
 
 {
@@ -151,7 +151,7 @@ def suggest_meal(context: str) -> Dict[str, Any]:
     """
 ```
 
-* parses natural language ingredients lists.
+* Parses natural language ingredients lists.
 * Queries TheMealDB API.
 * Returns the most relevant recipe match.
 
